@@ -10,25 +10,42 @@
 
 /* debug */
 
+.debug .brd-blk-solid {
+    border: 1px solid black;
+}
+
 /* /debug */
 
 /* general */
 
 main {
     height: 100vh;
-    widows: 100vh;
+    width: 100vw;
+    position: relative;
 }
 
 .green-head{
     background-color: #009688;
     width: 100%;
-    height: 25%;
+    height: 15%;
 }
 
 .gray-bottom{
     background-color: #dbdbd2;
     width: 100%;
-    height: 75%;
+    height: 85%;
+}
+
+.wrapper{
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    width: 80%;
+    height: 90%;
 }
 
 /* /general */
+
+/* wrapper content */
+
+/* /wrapper content */
