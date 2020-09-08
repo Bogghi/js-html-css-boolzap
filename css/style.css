@@ -94,6 +94,17 @@ main {
     margin-left: 30px;
 }
 
+.info {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info .sub-container {
+    margin-left: 30px;
+}
+
 .action{
     width: 150px;
     display: flex;
