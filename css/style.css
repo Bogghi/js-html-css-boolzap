@@ -222,6 +222,43 @@ main {
     width: 100%;
     background-image: url("../img/mine.jpg");
     overflow-x: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sub-wrapper {
+    width: 80%;
+    height: 100%;
+}
+
+.green-message {
+    padding: 25px;
+    max-width: 500px;
+    width: max-content;
+    border-radius: 25px;
+    margin-top: 20px;
+    background-color: #d5f9ba;
+}
+
+.flex-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.flex-left {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.gray-message {
+    padding: 25px;
+    max-width: 500px;
+    width: max-content;
+    border-radius: 25px;
+    margin-top: 20px;
+    background-color: #ffffff;
 }
 
 /* /message */
