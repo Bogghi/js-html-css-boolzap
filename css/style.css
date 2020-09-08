@@ -77,19 +77,48 @@ main {
 
 /* /wrapper content */
 
-/* navigation */
+/* status */
 
-.navigation .status {
+.status {
     height: 8%;
     width: 100%;
     background-color: #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.navigation .notification {
+.status img {
+    height: 70%;
+    border-radius: 100%;
+    margin-left: 30px;
+}
+
+.action{
+    width: 150px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.action i{
+    font-size: 30px;
+    color: #b1b1b1;
+}
+
+/* /status */
+
+/* notification */
+
+.notification {
     height: 8%;
+    /* height: 100px; */
     width: 100%;
     background-color: #8edafc;
 }
+
+/* /notification */
+
+/* navigation */
 
 .navigation .chat-nav {
     height: 84%;
