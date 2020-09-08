@@ -214,3 +214,24 @@ main {
 }
 
 /* /container */
+
+/* message */
+
+.messages {
+    height: 84%;
+    width: 100%;
+    background-image: url("../img/mine.jpg");
+    overflow-x: auto;
+}
+
+/* /message */
+
+/* inbox */
+
+.inbox {
+    height: 8%;
+    width: 100%;
+    background-color: #f3eeea;
+}
+
+/* /inbox */
