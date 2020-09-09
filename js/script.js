@@ -17,9 +17,6 @@ $(document).ready(function(){
         }
     });
 
-    // $(".archived .container:first-child").css("index","first");
-    // $(".archived .container:last-child").css("index","last");
-
     $("#search").on("keyup",function(){
         var keyworld = $("#search").val().toUpperCase();
         console.log(keyworld);
