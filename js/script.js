@@ -12,9 +12,26 @@ $(document).ready(function(){
             addMessage($(this).val(), "sender");
             $(this).val("");
             // setTimeout(addMessage("ok","reciver"),1000);
+            // Da chiedere a samu come mai non funziona il timeout
             addMessage("ok","reciver");
         }
     });
+
+    // $(".archived .container:first-child").css("index","first");
+    // $(".archived .container:last-child").css("index","last");
+
+    $("#search").on("keyup",function(){
+        var keyworld = $("#search").val().toUpperCase();
+        console.log(keyworld);
+        for(var i = 1; i <= $(".archived .container").length; i ++){
+            var tmp = $(".archived .container:nth-child(" + i + ") h2").html();
+            if(tmp.indexOf(keyworld) == -1){
+                $(".archived .container:nth-child(" + i + ")").addClass("d-active");
+            }else {
+                $(".archived .container:nth-child(" + i + ")").removeClass("d-active");
+            }
+        }
+    })
 
 });
 

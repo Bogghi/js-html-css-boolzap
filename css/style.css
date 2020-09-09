@@ -319,3 +319,8 @@ main {
 }
 
 /* /inbox */
+
+
+.d-active {
+    display: none;
+}
