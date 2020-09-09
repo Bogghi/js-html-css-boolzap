@@ -159,14 +159,37 @@ main {
     height: 7%;
     width: 100%;
     background-color: #fafafa;
+    display: flex;
+
+}
+
+.navigation .chat-nav .nav span{
+    width: 110px;
+    background-color: white;
+    border-top: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    margin: 10px 0px 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation .chat-nav .nav span{
+    font-size: 25px;
 }
 
 .navigation .chat-nav .nav input {
-    height: 60%;
-    width: 96%;
-    margin: 2%;
+    width: 100%;
+    border-top: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    margin: 10px 10px 10px 0px;
     padding: 8px;
-    border: 1px solid lightgray;
 }
 
 .navigation .chat-nav .nav input::placeholder {
@@ -239,6 +262,7 @@ main {
     width: max-content;
     border-radius: 25px;
     margin-top: 20px;
+    word-wrap: break-word;
     background-color: #d5f9ba;
 }
 
@@ -258,6 +282,7 @@ main {
     width: max-content;
     border-radius: 25px;
     margin-top: 20px;
+    word-wrap: break-word;
     background-color: #ffffff;
 }
 
@@ -269,6 +294,28 @@ main {
     height: 8%;
     width: 100%;
     background-color: #f3eeea;
+    display: flex;
+    justify-content: space-between;
+}
+
+.inbox input{
+    margin: 15px 0px;
+    width: 1000px;
+    border-radius: 7px;
+    padding: 0px 20px;
+}
+
+.inbox i{
+    font-size: 40px;
+}
+
+.inbox i{
+    margin: 0px 30px;
+}
+
+.i-container {
+    display: flex;
+    align-items: center;
 }
 
 /* /inbox */
