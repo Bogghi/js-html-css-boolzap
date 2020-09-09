@@ -21,7 +21,7 @@ $(document).ready(function(){
         var keyworld = $("#search").val().toUpperCase();
         console.log(keyworld);
         for(var i = 1; i <= $(".archived .container").length; i ++){
-            var tmp = $(".archived .container:nth-child(" + i + ") h2").html();
+            var tmp = $(".archived .container:nth-child(" + i + ") h2").html().toUpperCase();
             if(tmp.indexOf(keyworld) == -1){
                 $(".archived .container:nth-child(" + i + ")").addClass("d-active");
             }else {
