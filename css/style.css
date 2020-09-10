@@ -261,7 +261,7 @@ main {
     max-width: 500px;
     width: max-content;
     border-radius: 25px;
-    margin-top: 20px;
+    margin: 10px 0px;
     word-wrap: break-word;
     background-color: #d5f9ba;
 }
@@ -281,7 +281,7 @@ main {
     max-width: 500px;
     width: max-content;
     border-radius: 25px;
-    margin-top: 20px;
+    margin: 10px 0px;
     word-wrap: break-word;
     background-color: #ffffff;
 }

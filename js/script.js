@@ -6,7 +6,12 @@
 // per qualsiasi cosa mi trovate su hotwell! :slightly_smiling_face: buon lavoro!!
 
 $(document).ready(function(){
-    
+
+    for(var i = 1; i <= $(".archived .container").length; i ++){
+        $(".messages .sub-wrapper:nth-child(" + i + ")").attr("index",i);
+        $(".archived .container:nth-child(" + i + ")").attr("index",i);
+    }
+
     $("#input").keydown(function(e){
         if(e.which == 13){
             addMessage($(this).val(), "sender");
@@ -14,12 +19,12 @@ $(document).ready(function(){
             // setTimeout(addMessage("ok","reciver"),1000);
             // Da chiedere a samu come mai non funziona il timeout
             addMessage("ok","reciver");
+            $(".sub-wrapper").focus();
         }
     });
 
     $("#search").on("keyup",function(){
         var keyworld = $("#search").val().toUpperCase();
-        console.log(keyworld);
         for(var i = 1; i <= $(".archived .container").length; i ++){
             var tmp = $(".archived .container:nth-child(" + i + ") h2").html().toUpperCase();
             if(tmp.indexOf(keyworld) == -1){
@@ -30,6 +35,18 @@ $(document).ready(function(){
         }
     })
 
+    $(".container").click(function(){
+        var name = $(this).find("h2").html();
+        var index = $(this).attr("index")
+        var img = $(this).find("img").attr("src");
+        $(".sub-wrapper:not(.d-active)").addClass("d-active");
+        console.log(name + " " + index);
+
+        $(".sub-wrapper[index='" + index + "']").removeClass("d-active");
+        $(".status .info h2").html(name);
+        $(".status .info img").attr("src",img);
+    });
+
 });
 
 
@@ -37,14 +54,14 @@ function addMessage(message, source){
 
     console.log(message, source);
     if(source == "sender"){
-        var sndTemplate = $(".messages .sub-wrapper div.flex-right").last().clone();
+        var sndTemplate = $(".sub-wrapper:not(.d-active) div.flex-right").last().clone();
         sndTemplate.find(".green-message").html(message);
-        $(".messages .sub-wrapper").append(sndTemplate);
+        $(".sub-wrapper:not(.d-active)").append(sndTemplate);
     }else if(source == "reciver"){
-        var rcvTemplate = $(".messages .sub-wrapper div.flex-left").last().clone();
+        var rcvTemplate = $(".sub-wrapper:not(.d-active) div.flex-left").last().clone();
         rcvTemplate.find(".gray-message").html(message);
         setTimeout(function(){
-            $(".messages .sub-wrapper").append(rcvTemplate);
+            $(".messages .sub-wrapper:not(.d-active)").append(rcvTemplate);
         }, 1000);
     }
 
