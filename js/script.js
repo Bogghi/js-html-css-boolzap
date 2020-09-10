@@ -47,6 +47,21 @@ $(document).ready(function(){
         $(".status .info img").attr("src",img);
     });
 
+    $(".flex-right").click(function(){
+        console.log("I'm active")
+        if($(this).next().attr("class") != "opt")
+        {
+            $(this).after("<ul class='opt'><li>Info messsagio</li><li id='del'>Cancella</li></ul>");
+        }else {
+            $(this).next().remove();
+        }
+    });
+
+    $(".sub-wrapper").on("click","#del", function(){
+        console.log("I'm should be active")
+        $(this).parent().prev().remove()
+        $(this).parent().remove();
+    });
 });
 
 

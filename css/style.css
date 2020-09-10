@@ -269,6 +269,7 @@ main {
 .flex-right {
     display: flex;
     justify-content: flex-end;
+    position: relative;
 }
 
 .flex-left {
@@ -284,6 +285,22 @@ main {
     margin: 10px 0px;
     word-wrap: break-word;
     background-color: #ffffff;
+}
+
+.opt {
+    /* display: none; */
+    background-color: white;
+    line-height: 25px;
+    padding: 0px 16px;
+    border-radius: 7px;
+    list-style: none;
+    position: absolute;
+    right: 145px;
+}
+
+.opt li {
+    text-align: center;
+    font-size: 14px;
 }
 
 /* /message */
