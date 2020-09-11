@@ -57,8 +57,12 @@ $(document).ready(function(){
         $(this).find("#drop-down").hide();
     })
 
-    $(".msg-option").on("click","#drop-down", function(){
-        $(this).parent().after("<ul class='opt'><li>Info messsagio</li><li id='del'>Cancella</li></ul>");
+    $(document).on("click","#drop-down", function(){
+        if($(this).parent().next().length == 0){
+            $(this).parent().after("<ul class='opt'><li>Info messsagio</li><li id='del'>Cancella</li></ul>");
+        }else{
+            $(this).parent().next().remove();
+        }
     })
 });
 
@@ -68,11 +72,11 @@ function addMessage(message, source){
     console.log(message, source);
     if(source == "sender"){
         var sndTemplate = $(".sub-wrapper:not(.d-active) div.flex-right").last().clone();
-        sndTemplate.find(".green-message").html(message);
+        sndTemplate.find(".green.message .msg-option #content").html(message);
         $(".sub-wrapper:not(.d-active)").append(sndTemplate);
     }else if(source == "reciver"){
         var rcvTemplate = $(".sub-wrapper:not(.d-active) div.flex-left").last().clone();
-        rcvTemplate.find(".gray-message").html(message);
+        rcvTemplate.find(".gray.message .msg-option #content").html(message);
         setTimeout(function(){
             $(".messages .sub-wrapper:not(.d-active)").append(rcvTemplate);
         }, 1000);

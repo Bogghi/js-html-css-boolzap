@@ -307,7 +307,8 @@ main {
     list-style: none;
     position: absolute;
     right: 0px;
-    bottom: -90px
+    bottom: -90px;
+    z-index: 1;
 }
 
 .opt li {
