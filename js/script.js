@@ -57,6 +57,7 @@ $(document).ready(function(){
         $(this).find("#drop-down").hide();
     })
 
+    //even to manage the drop down menu
     $(document).on("click","#drop-down", function(){
         if($(this).parent().next().length == 0){
             $(this).parent().after("<ul class='opt'><li>Info messsagio</li><li id='del'>Cancella</li></ul>");
@@ -64,6 +65,11 @@ $(document).ready(function(){
             $(this).parent().next().remove();
         }
     })
+
+    $(document).on("click","#del",function(){
+        $(this).parent().prev().remove();
+        $(this).parent().parent().parent().remove();
+    });
 });
 
 
