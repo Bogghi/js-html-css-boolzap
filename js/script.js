@@ -40,11 +40,12 @@ $(document).ready(function(){
         var index = $(this).attr("index")
         var img = $(this).find("img").attr("src");
         $(".sub-wrapper:not(.d-active)").addClass("d-active");
-        console.log(name + " " + index);
+        $(".container.active").removeClass("active");
 
         $(".sub-wrapper[index='" + index + "']").removeClass("d-active");
         $(".status .info h2").html(name);
         $(".status .info img").attr("src",img);
+        $(this).addClass("active");
     });
 
     //display block for the opotion arrow
@@ -74,15 +75,17 @@ $(document).ready(function(){
 
 
 function addMessage(message, source){
-
+    var time = new Date();
     console.log(message, source);
     if(source == "sender"){
         var sndTemplate = $(".sub-wrapper:not(.d-active) div.flex-right").last().clone();
         sndTemplate.find(".green.message .msg-option #content").html(message);
+        sndTemplate.find(".green.message .msg-option #time").html(time.getHours() + ":" + time.getMinutes());
         $(".sub-wrapper:not(.d-active)").append(sndTemplate);
     }else if(source == "reciver"){
         var rcvTemplate = $(".sub-wrapper:not(.d-active) div.flex-left").last().clone();
         rcvTemplate.find(".gray.message .msg-option #content").html(message);
+        rcvTemplate.find(".gray.message .msg-option #time").html(time.getHours() + ":" + time.getMinutes());
         setTimeout(function(){
             $(".messages .sub-wrapper:not(.d-active)").append(rcvTemplate);
         }, 1000);
