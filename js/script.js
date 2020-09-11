@@ -47,21 +47,19 @@ $(document).ready(function(){
         $(".status .info img").attr("src",img);
     });
 
-    // $(".sub-wrapper .flex-right .green-message").on("click","",function(){
-    //     console.log("I'm active")
-    //     if($(this).next().attr("class") != "opt")
-    //     {
-    //         $(this).after("<ul class='opt'><li>Info messsagio</li><li id='del'>Cancella</li></ul>");
-    //     }else {
-    //         $(this).next().remove();
-    //     }
-    // })
+    //display block for the opotion arrow
+    $(document).on("mouseenter",".message",function(){
+        $(this).find("#drop-down").show();
+    });
 
-    // $(".sub-wrapper").on("click","#del", function(){
-    //     console.log("I'm should be active")
-    //     $(this).parent().prev().remove()
-    //     $(this).parent().remove();
-    // });
+    //display none for the option arrow
+    $(document).on("mouseleave",".message",function(){
+        $(this).find("#drop-down").hide();
+    })
+
+    $(".msg-option").on("click","#drop-down", function(){
+        $(this).parent().after("<ul class='opt'><li>Info messsagio</li><li id='del'>Cancella</li></ul>");
+    })
 });
 
 
