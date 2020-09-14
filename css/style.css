@@ -316,6 +316,10 @@ main {
     text-align: center;
 }
 
+#del {
+    cursor: pointer;
+}
+
 /* /message */
 
 /* inbox */
