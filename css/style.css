@@ -307,6 +307,7 @@ main {
     padding: 0px 16px;
     list-style: none;
     position: absolute;
+    box-shadow: 0px 0px 5px gray;
     right: 0px;
     bottom: -90px;
     z-index: 1;
